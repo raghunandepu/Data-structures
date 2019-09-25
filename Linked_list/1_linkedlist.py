@@ -55,6 +55,18 @@ class LinkedList():
       
     return size
   
+  # Insert at middle
+  def insertMid(self, data, previousNode):
+    self.size = self.size + 1
+    newNode = Node(data)
+    
+    actualNode = self.head
+    while actualNode.data != previousNode:
+      actualNode = actualNode.nextNode
+    
+    newNode.nextNode = actualNode.nextNode
+    actualNode.nextNode = newNode
+    
   # Insert at end
   # O(N)
   def insertEnd(self, data):
@@ -79,6 +91,7 @@ linkedlist.insertStart(12)
 linkedlist.insertStart(122)
 linkedlist.insertStart(3)
 linkedlist.insertEnd(31)
+linkedlist.insertMid(55,31)
 
 linkedlist.traversalList()
 print ("Size of linked list is:", linkedlist.size1())
