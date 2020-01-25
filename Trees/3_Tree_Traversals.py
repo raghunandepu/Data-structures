@@ -5,6 +5,9 @@
 # A class that represents an individual node in a 
 # Binary Tree 
 
+# Time Complexity: O(n)
+# Auxiliary Space : If we don’t consider size of stack for function calls then O(1) otherwise O(n).
+
 class Node:
   def __init__(self, key):
     self.left = None
